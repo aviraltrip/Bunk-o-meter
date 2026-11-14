@@ -1,113 +1,40 @@
-# 🎓 Bunk-o-Meter
+# Bunk-o-Meter
 
-> **College Attendance Tracker** — Know exactly how many classes you can bunk and still pass.
+College attendance tracker built to help students calculate how many classes they can safely skip while maintaining their required attendance criteria.
 
-![Bunk-o-Meter](src/assets/hero.png)
+Built during the Vibecoding 101 session tailored for 1st and 2nd year engineering students.
 
-## ✨ Features
+## Features
 
-- 📊 **Live Attendance %** — Real-time percentage per subject
-- 🟢 / 🔴 **Safe / Critical status** — Color-coded attendance health
-- 🧮 **Bunk Calculator** — Tells you exactly how many classes you can skip
-- ⚡ **Quick Actions** — +1 Attended / +1 Missed with one tap
-- 🤖 **AI Bunk Excuse Generator** — Powered by Gemini AI, generates funny Hindi excuses
-- 🔍 **Search & Filter** — Find subjects instantly, filter by Safe / Shortage
-- 💾 **Persistent Storage** — All data saved to localStorage, no account needed
-- 📱 **Mobile-First UI** — Designed as a phone-sized app viewport
+- Attendance Tracking: Real-time percentage tracking per subject with Safe and Shortage alerts.
+- Bunk Calculator: Calculates how many classes you can bunk or need to attend to stay above your target.
+- AI Excuse Generator: Generates contextual Hindi excuses for missed lectures powered by the Gemini API (with offline fallbacks).
+- Local Persistence: Saves attendance data directly in browser localStorage with zero account setup.
 
----
+## Tech Stack
 
-## 🚀 Getting Started
+- React 19 + TypeScript
+- Vite
+- Tailwind CSS
+- Google Gemini API
 
-### Prerequisites
-
-- Node.js >= 18
-- npm >= 9
-
-### Installation
+## Setup
 
 ```bash
-# Clone the repo
 git clone https://github.com/aviraltrip/Bunk-o-meter.git
 cd Bunk-o-meter
-
-# Install dependencies
 npm install
-
-# Start development server
 npm run dev
 ```
 
-App runs at `http://localhost:5173`
+## Environment Variables
 
----
-
-## 🔑 Environment Variables
-
-Create a `.env` file in the project root:
+Copy `.env.example` to `.env` (optional, for Gemini AI excuses):
 
 ```env
 VITE_GEMINI_API_KEY=your_gemini_api_key_here
 ```
 
-Get a free Gemini API key at [aistudio.google.com](https://aistudio.google.com/app/apikey).
+## License
 
-> Without an API key, the AI Excuse Generator uses a built-in Hindi fallback database.
-
----
-
-## 🏗️ Tech Stack
-
-| Layer | Technology |
-|---|---|
-| Framework | React 18 + TypeScript |
-| Build Tool | Vite |
-| Styling | Tailwind CSS |
-| Icons | Lucide React |
-| AI | Google Gemini 1.5 Flash |
-| Persistence | localStorage |
-| Animations | canvas-confetti |
-
----
-
-## 📁 Project Structure
-
-```
-src/
-├── components/         # UI components
-│   ├── Header.tsx
-│   ├── SubjectCard.tsx
-│   ├── OverallSummaryCard.tsx
-│   ├── AddEditSubjectModal.tsx
-│   ├── ConfirmDeleteModal.tsx
-│   ├── AIExcuseModal.tsx
-│   └── EmptyState.tsx
-├── hooks/
-│   └── useLocalStorage.ts
-├── services/
-│   └── aiExcuseService.ts
-├── types/
-│   └── attendance.ts
-└── utils/
-    ├── attendance.ts
-    └── constants.ts
-```
-
----
-
-## 🤖 AI Excuse Generator
-
-The AI Excuse feature generates **100% Hindi bunk excuses** for your professor. Choose from 4 personas:
-
-| Persona | Theme |
-|---|---|
-| अलार्म धोखा | Alarm glitch / phone boot loop |
-| हॉस्टल ड्रामा | Warden raid / geyser drama |
-| टेक लोचा | Git conflict / infinite loop |
-| गंभीर दर्शन | Quantum physics / existential crisis |
-
----
-
-## 📄 License
-
-MIT © [aviraltrip](https://github.com/aviraltrip)
+MIT
